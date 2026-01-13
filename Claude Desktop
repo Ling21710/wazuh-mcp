@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "WAZUH_FINAL_HOPE": {
+      "command": "/usr/local/bin/docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "--platform",
+        "linux/amd64",
+        "--network", "single-node_default",
+        "-e", "WAZUH_URL=https://docker-wazuh-manager-1:55000",
+        "-e", "WAZUH_USER=wazuh",
+        "-e", "WAZUH_PASS=admin",
+        "-e", "VERIFY_SSL=false",
+        "ghcr.io/gbrigandi/mcp-server-wazuh:latest"
+      ]
+    }
+  }
+}
