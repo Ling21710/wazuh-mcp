@@ -1,0 +1,7 @@
+hosts:
+  - default:
+      url: https://localhost
+      port: 55000
+      username: wazuh
+      password: admin
+      run_as: false
